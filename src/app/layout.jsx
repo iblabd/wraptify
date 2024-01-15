@@ -1,4 +1,5 @@
 import './globals.css'
+import NextAuthProvider from '@/contexts/next-auth-provider'
 import { cn } from '@/lib/utils'
 import { Inter } from 'next/font/google'
 
@@ -13,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, 'scroll-smooth')}>{children}</body>
+      <body className={cn(inter.className, 'scroll-smooth')}>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   )
 }

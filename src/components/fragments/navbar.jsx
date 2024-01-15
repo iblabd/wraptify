@@ -3,11 +3,13 @@
 import { Button } from '../ui/button'
 import NavHeader from './nav-header'
 import { ArrowRightIcon } from 'lucide-react'
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useState } from 'react'
 
 const Navbar = () => {
   const [state, setState] = useState(false)
+  const { status } = useSession()
 
   const navigation = [
     { name: 'Home', href: '/home' },
@@ -53,14 +55,28 @@ const Navbar = () => {
               })}
             </ul>
             <div className="mt-6 flex-1 items-center justify-end gap-x-6 space-y-6 md:mt-0 md:flex md:space-y-0">
-              <Button className="w-full md:w-min">
-                <Link href="/login">
-                  <div className="flex items-center">
-                    <span>Get started</span>
-                    <ArrowRightIcon className="ml-2 size-4" />
-                  </div>
-                </Link>
-              </Button>
+              {status === 'authenticated' ? (
+                <ul className="items-center justify-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                  <li className="text-destructive hover:text-destructive/80">
+                    <Link
+                      href="/api/auth/signout"
+                      className="block"
+                      scroll={false}
+                    >
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              ) : (
+                <Button className="w-full md:w-min">
+                  <Link href="/api/auth/signin">
+                    <div className="flex items-center">
+                      <span>Get started</span>
+                      <ArrowRightIcon className="ml-2 size-4" />
+                    </div>
+                  </Link>
+                </Button>
+              )}
             </div>
           </div>
         </div>
