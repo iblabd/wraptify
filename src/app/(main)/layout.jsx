@@ -1,11 +1,10 @@
-import Hero from '@/components/fragments/hero'
 import Navbar from '@/components/fragments/navbar'
 
-export default function Home() {
+export default function MainLayout({ children }) {
   return (
     <>
       <Navbar />
-      <Hero />
+      {children}
     </>
   )
 }
