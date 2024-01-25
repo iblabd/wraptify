@@ -12,7 +12,7 @@ const Navbar = () => {
   const { status } = useSession()
 
   const navigation = [
-    { name: 'Home', href: '/home' },
+    { name: 'Generate', href: '/generate' },
     { name: 'About', href: '#about' },
     { name: 'FAQs', href: '#faqs' },
   ]
