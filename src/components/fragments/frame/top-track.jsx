@@ -16,10 +16,10 @@ const TopTrackFrame = ({ tracks }) => {
               className="flex w-full items-center justify-center space-x-2"
               key={index}
             >
-              <div className="flex aspect-square size-4 items-center">
+              <div className="flex size-5 items-center justify-center">
                 <span className="text-xl font-extrabold">{index + 1}</span>
               </div>
-              <div className="flex aspect-square size-14 items-center bg-blue-400">
+              <div className="flex aspect-square size-14 items-center">
                 <AspectRatio ratio={1 / 1}>
                   <Image
                     src={album.images[0].url}
@@ -30,7 +30,7 @@ const TopTrackFrame = ({ tracks }) => {
                   />
                 </AspectRatio>
               </div>
-              <div className="flex w-full flex-col justify-center">
+              <div className="flex h-full w-full flex-col justify-center">
                 <span className="text-xs font-bold">{name}</span>
                 <span className="text-[0.625rem] opacity-90">
                   {artists.map((artist) => artist.name).join(', ')}
