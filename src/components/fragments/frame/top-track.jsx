@@ -7,19 +7,19 @@ const TopTrackFrame = ({ tracks }) => {
     <WrapFrame>
       <div
         id="top-track-frame"
-        className="h-full bg-[#F674C2] object-cover px-6 py-14"
+        className="h-full w-full bg-[#F674C2] object-cover px-6 py-14"
       >
-        <div className="text-2xl font-bold">My Top Songs</div>
-        <div className="mt-8 flex flex-col space-y-2">
+        <div className="text-xl font-bold">My Top Songs</div>
+        <div className="mt-6 flex flex-col items-center justify-center space-y-2">
           {tracks.map(({ name, artists, album }, index) => (
             <div
-              className="flex w-full items-center space-x-2"
+              className="flex w-full items-center justify-center space-x-2"
               key={index}
             >
-              <div className="flex size-6 items-center justify-center">
+              <div className="flex aspect-square size-4 items-center">
                 <span className="text-xl font-extrabold">{index + 1}</span>
               </div>
-              <div className="size-12">
+              <div className="flex aspect-square size-14 items-center bg-blue-400">
                 <AspectRatio ratio={1 / 1}>
                   <Image
                     src={album.images[0].url}
@@ -30,8 +30,8 @@ const TopTrackFrame = ({ tracks }) => {
                   />
                 </AspectRatio>
               </div>
-              <div className="flex flex-col">
-                <span className="text-sm font-bold">{name}</span>
+              <div className="flex w-full flex-col justify-center">
+                <span className="text-xs font-bold">{name}</span>
                 <span className="text-[0.625rem] opacity-90">
                   {artists.map((artist) => artist.name).join(', ')}
                 </span>

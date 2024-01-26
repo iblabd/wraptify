@@ -9,6 +9,9 @@ export function TopTrack({ tracks }) {
     const element = document.getElementById('top-track-frame')
     const canvas = await html2canvas(element, {
       useCORS: true,
+      scale: 3.75,
+      windowWidth: 1920,
+      windowHeight: 1080,
     })
     const data = canvas.toDataURL('image/jpg')
     const link = document.createElement('a')
