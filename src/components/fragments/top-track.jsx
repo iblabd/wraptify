@@ -7,7 +7,9 @@ import html2canvas from 'html2canvas'
 export function TopTrack({ tracks }) {
   const handleImageDownload = async () => {
     const element = document.getElementById('top-track-frame')
-    const canvas = await html2canvas(element)
+    const canvas = await html2canvas(element, {
+      useCORS: true,
+    })
     const data = canvas.toDataURL('image/jpg')
     const link = document.createElement('a')
 
