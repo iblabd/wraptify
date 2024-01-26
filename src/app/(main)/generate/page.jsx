@@ -1,6 +1,6 @@
 import HomeCard from '@/components/fragments/home-card'
 import { authOptions } from '@/lib/auth'
-import { HeadphonesIcon, Music2Icon, UserIcon, UsersIcon } from 'lucide-react'
+import { Music2Icon } from 'lucide-react'
 import { getServerSession } from 'next-auth'
 
 export default async function Generate() {
@@ -15,24 +15,10 @@ export default async function Generate() {
       </p>
       <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <HomeCard
-          title="My profile"
-          description="Share your spotify profile with number of followers as an image."
-          icon={<UserIcon className="size-4" />}
-        />
-        <HomeCard
-          title="Top track's"
-          description="Wrap your top track's now."
+          href="/generate/track"
+          title="Top songs"
+          description="Wrap your top songs."
           icon={<Music2Icon className="size-4" />}
-        />
-        <HomeCard
-          title="Top artists"
-          description="Wrap your top artists now."
-          icon={<UsersIcon className="size-4" />}
-        />
-        <HomeCard
-          title="Top genres"
-          description="Wrap your top genres now."
-          icon={<HeadphonesIcon className="size-4" />}
         />
       </div>
     </div>
