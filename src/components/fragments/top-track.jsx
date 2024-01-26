@@ -17,7 +17,10 @@ export function TopTrack({ tracks }) {
     const link = document.createElement('a')
 
     link.href = data
-    link.download = 'downloaded-image.jpg'
+    const now = new Date()
+    const timestamp = now.getTime() / 1000
+    const filename = `wraptify-${Math.floor(timestamp)}.jpg`
+    link.download = filename
 
     document.body.appendChild(link)
     link.click()
