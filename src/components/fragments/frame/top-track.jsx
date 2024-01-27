@@ -1,19 +1,22 @@
+'use client'
+
 import { AspectRatio } from '../../ui/aspect-ratio'
 import WrapFrame from '../../ui/wrap-frame'
 import Image from 'next/image'
 
-const TopTrackFrame = ({ tracks }) => {
+const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
   return (
     <WrapFrame>
       <div
         id="top-track-frame"
-        className="h-full w-full bg-[#F674C2] object-cover px-6 py-14"
+        className={`h-full w-full object-cover px-6 py-14`}
+        style={{ backgroundColor: `${bgColor}`, color: `${textColor}` }}
       >
-        <div className="text-xl font-bold">My Top Songs</div>
+        <div className={`text-xl font-bold`}>My Top Songs</div>
         <div className="mt-6 flex flex-col items-center justify-center space-y-2">
           {tracks.map(({ name, artists, album }, index) => (
             <div
-              className="flex w-full items-center justify-center space-x-2"
+              className={`flex w-full items-center justify-center space-x-2`}
               key={index}
             >
               <div className="flex size-5 items-center justify-center">

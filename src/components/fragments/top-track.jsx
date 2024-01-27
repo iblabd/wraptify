@@ -3,6 +3,7 @@
 import TopTrackFrame from '@/components/fragments/frame/top-track'
 import { Button } from '@/components/ui/button'
 import html2canvas from 'html2canvas'
+import { useSearchParams } from 'next/navigation'
 
 export function TopTrack({ tracks }) {
   const handleImageDownload = async () => {
@@ -26,6 +27,10 @@ export function TopTrack({ tracks }) {
     link.click()
     document.body.removeChild(link)
   }
+
+  const searchParams = useSearchParams()
+  const bgColor = searchParams.get('bgColor')
+  const textColor = searchParams.get('textColor')
   return (
     <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
       <Button
@@ -35,7 +40,11 @@ export function TopTrack({ tracks }) {
       >
         Download
       </Button>
-      <TopTrackFrame tracks={tracks} />
+      <TopTrackFrame
+        tracks={tracks}
+        bgColor={bgColor}
+        textColor={textColor}
+      />
     </div>
   )
 }
