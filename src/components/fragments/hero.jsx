@@ -1,7 +1,6 @@
-import { Button } from '../ui/button';
-import { ChevronRightIcon } from 'lucide-react';
-import Link from 'next/link';
-
+import { Button } from '../ui/button'
+import { ChevronRightIcon } from 'lucide-react'
+import Link from 'next/link'
 
 const Hero = () => (
   <div className="container mx-auto max-w-4xl space-y-5 py-20 text-center">
@@ -17,7 +16,7 @@ const Hero = () => (
     </p>
     <div className="flex items-center justify-center gap-x-3 font-medium">
       <Button>
-        <Link href="/home">
+        <Link href="/generate">
           <div className="flex items-center">
             <span>Get my list</span>
             <ChevronRightIcon className="ml-2 size-4" />

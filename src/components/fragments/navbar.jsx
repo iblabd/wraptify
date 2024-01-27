@@ -13,8 +13,8 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Generate', href: '/generate' },
-    { name: 'About', href: '#about' },
-    { name: 'FAQs', href: '#faqs' },
+    { name: 'About', href: '#' },
+    { name: 'FAQs', href: '#' },
   ]
 
   return (
