@@ -36,7 +36,7 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
               <div className="flex h-full w-full flex-col justify-center">
                 <span className="text-xs font-bold">{name}</span>
                 <span className="text-[0.625rem] opacity-90">
-                  {artists.map((artist) => artist.name).join(', ')}
+                  {artists[0].name}
                 </span>
               </div>
             </div>
