@@ -36,4 +36,8 @@ export const authOptions = {
       return session
     },
   },
+  theme: {
+    colorScheme: 'light',
+    brandColor: '#171717',
+  },
 }
