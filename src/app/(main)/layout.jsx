@@ -4,7 +4,7 @@ export default function MainLayout({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <div className="container">{children}</div>
     </>
   )
 }
