@@ -1,5 +1,6 @@
-import { AspectRatio } from '../../ui/aspect-ratio'
-import WrapFrame from '../../ui/wrap-frame'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import SpotifyLogo from '@/components/ui/spotify-logo'
+import WrapFrame from '@/components/ui/wrap-frame'
 import Image from 'next/image'
 
 const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
@@ -41,6 +42,19 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex w-full items-center justify-between px-4">
+          <SpotifyLogo
+            width="76px"
+            height="22px"
+            fill={textColor}
+          />
+          <div
+            className="text-sm font-medium"
+            style={{ color: textColor }}
+          >
+            bit.ly/wraptify
           </div>
         </div>
       </div>
