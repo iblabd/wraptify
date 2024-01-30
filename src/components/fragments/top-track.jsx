@@ -10,11 +10,11 @@ export function TopTrack({ tracks }) {
   const bgColor = searchParams.get('bgColor')
   const textColor = searchParams.get('textColor')
   return (
-    <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div className="mt-8 grid grid-cols-1 gap-6 gap-y-12 pb-40 lg:grid-cols-2 lg:pb-6">
       <Button
         onClick={() => handleImageDownload({ id: 'tracks' })}
         size="lg"
-        className="w-full"
+        className="order-last w-full lg:order-first"
       >
         Download
       </Button>
