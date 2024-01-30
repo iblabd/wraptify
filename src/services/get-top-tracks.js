@@ -6,6 +6,7 @@ async function getTopTracks(token, timeRange) {
       token,
       `v1/me/top/tracks?time_range=${timeRange}&limit=5`,
       'GET',
+      3600,
     )
   ).items
 }
