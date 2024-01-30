@@ -51,7 +51,7 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
             fill={textColor}
           />
           <div
-            className="text-sm font-medium"
+            className="text-sm font-semibold"
             style={{ color: textColor }}
           >
             bit.ly/wraptify
