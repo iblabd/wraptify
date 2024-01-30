@@ -28,7 +28,7 @@ export function TopTrack({ tracks }) {
             <AccordionTrigger className="mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
               Customize
             </AccordionTrigger>
-            <AccordionContent className="mt-2">
+            <AccordionContent className="mt-2 px-1">
               <CustomizeColor />
             </AccordionContent>
           </AccordionItem>
