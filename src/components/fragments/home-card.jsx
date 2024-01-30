@@ -4,13 +4,13 @@ import { generateColorScheme } from '@/lib/utils'
 import { ChevronRightIcon } from 'lucide-react'
 import Link from 'next/link'
 
-const HomeCard = ({ title, description, icon, href }) => {
+const HomeCard = ({ title, description, icon, href, query }) => {
   const color = generateColorScheme()
   return (
     <Link
       href={{
         pathname: href,
-        query: { bgColor: color.bgColor, textColor: color.textColor },
+        query: { bgColor: color.bgColor, textColor: color.textColor, ...query },
       }}
     >
       <Card className="group hover:border-primary hover:bg-secondary">
