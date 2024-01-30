@@ -19,7 +19,7 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
                 className={`flex w-full items-center justify-center space-x-2`}
                 key={index}
               >
-                <div className="flex size-5 items-center justify-center">
+                <div className="flex aspect-square size-4 items-center justify-center">
                   <span className="text-xl font-extrabold">{index + 1}</span>
                 </div>
                 <div className="flex aspect-square size-14 items-center">
