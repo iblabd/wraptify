@@ -21,13 +21,13 @@ const HomeCard = ({ title, description, icon, href }) => {
           >
             {icon}
           </Button>
-          <CardTitle className="group-hover:text-secondary-foreground">
+          <CardTitle className="scroll-m-20 text-2xl font-semibold tracking-tight group-hover:text-secondary-foreground">
             {title}
           </CardTitle>
           <div className="text-accent-foreground group-hover:text-foreground">
             {description}
           </div>
-          <CardDescription className="flex items-center group-hover:text-primary">
+          <CardDescription className="flex items-center text-muted-foreground group-hover:text-primary">
             <span>Generate now</span>
             <ChevronRightIcon className="ml-1 size-3 transition-all group-hover:ml-2" />
           </CardDescription>
