@@ -67,4 +67,8 @@ export const colors = [
     bgColor: '#F76EBE',
     textColor: '#202F72',
   },
+  {
+    bgColor: '#D0F46C',
+    textColor: '#51375A',
+  },
 ]
