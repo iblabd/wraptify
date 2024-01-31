@@ -1,6 +1,7 @@
 import { Header } from '@/components/fragments/header'
 import HomeCard from '@/components/fragments/home-card'
 import { authOptions } from '@/lib/auth'
+import { UsersIcon } from 'lucide-react'
 import { Music2Icon } from 'lucide-react'
 import { getServerSession } from 'next-auth'
 
@@ -19,6 +20,13 @@ export default async function Generate() {
           title="Top songs"
           description="Wrap your top songs at certain period."
           icon={<Music2Icon className="size-4" />}
+        />
+        <HomeCard
+          href="/generate/top-artists"
+          query={{ time_period: 'short_term' }}
+          title="Top artists"
+          description="Wrap your top artists at certain period."
+          icon={<UsersIcon className="size-4" />}
         />
       </div>
     </>

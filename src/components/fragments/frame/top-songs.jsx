@@ -8,7 +8,7 @@ const TopSongsFrame = ({ songs, bgColor, textColor }) => {
   return (
     <WrapFrame>
       <div
-        id="songs"
+        id="top_songs"
         className="h-full w-full"
         style={{ backgroundColor: `${bgColor}`, color: `${textColor}` }}
       >

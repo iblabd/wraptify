@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { handleImageDownload } from '@/lib/handle-image-download'
-import getTopSongs from '@/services/get-top-songs'
+import getTopItems from '@/services/get-top-items'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -25,7 +25,12 @@ export function TopSongs({ session }) {
   useEffect(() => {
     if (session) {
       const getSongs = async (session, timePeriod) => {
-        const songs = await getTopSongs(session.accessToken, timePeriod)
+        const songs = await getTopItems(
+          session.accessToken,
+          'tracks',
+          timePeriod,
+          5,
+        )
         setSongsList(songs)
       }
       getSongs(session, timePeriod)
@@ -54,7 +59,7 @@ export function TopSongs({ session }) {
           </AccordionItem>
         </Accordion>
         <Button
-          onClick={() => handleImageDownload({ id: 'songs' })}
+          onClick={() => handleImageDownload({ id: 'top_songs' })}
           size="lg"
           className="w-full"
           disabled={!songsList}
