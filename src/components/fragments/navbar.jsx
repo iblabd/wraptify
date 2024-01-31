@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Generate', href: '/generate' },
-    { name: 'About', href: '#' },
     { name: 'Privacy Policy', href: '/privacy-policy' },
   ]
 
