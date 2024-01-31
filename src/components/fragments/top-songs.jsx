@@ -2,7 +2,7 @@
 
 import CustomizeColor from './customize/color'
 import CustomizeTimePeriod from './customize/time-period'
-import TopTrackFrame from '@/components/fragments/frame/top-track'
+import TopSongsFrame from '@/components/fragments/frame/top-songs'
 import {
   Accordion,
   AccordionContent,
@@ -11,24 +11,24 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { handleImageDownload } from '@/lib/handle-image-download'
-import getTopTracks from '@/services/get-top-tracks'
+import getTopSongs from '@/services/get-top-songs'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export function TopTrack({ session }) {
+export function TopSongs({ session }) {
   const searchParams = useSearchParams()
   const bgColor = searchParams.get('bgColor')
   const textColor = searchParams.get('textColor')
-  const [trackList, setTrackList] = useState()
+  const [songsList, setSongsList] = useState()
   const [timePeriod, setTimePeriod] = useState(searchParams.get('time_period'))
 
   useEffect(() => {
     if (session) {
-      const getTracks = async (session, timePeriod) => {
-        const track = await getTopTracks(session.accessToken, timePeriod)
-        setTrackList(track)
+      const getSongs = async (session, timePeriod) => {
+        const songs = await getTopSongs(session.accessToken, timePeriod)
+        setSongsList(songs)
       }
-      getTracks(session, timePeriod)
+      getSongs(session, timePeriod)
     }
   }, [timePeriod, setTimePeriod])
 
@@ -54,16 +54,16 @@ export function TopTrack({ session }) {
           </AccordionItem>
         </Accordion>
         <Button
-          onClick={() => handleImageDownload({ id: 'tracks' })}
+          onClick={() => handleImageDownload({ id: 'songs' })}
           size="lg"
           className="w-full"
-          disabled={!trackList}
+          disabled={!songsList}
         >
-          {trackList ? 'Download' : 'Please wait'}
+          {songsList ? 'Download' : 'Please wait'}
         </Button>
       </div>
-      <TopTrackFrame
-        tracks={trackList}
+      <TopSongsFrame
+        songs={songsList}
         bgColor={bgColor}
         textColor={textColor}
       />

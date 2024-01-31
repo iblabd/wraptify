@@ -1,6 +1,6 @@
 import fetchWebApi from './fetch-web-api'
 
-async function getTopTracks(token, timeRange) {
+async function getTopSongs(token, timeRange) {
   return (
     await fetchWebApi(
       token,
@@ -11,4 +11,4 @@ async function getTopTracks(token, timeRange) {
   ).items
 }
 
-export default getTopTracks
+export default getTopSongs

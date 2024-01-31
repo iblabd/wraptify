@@ -4,21 +4,21 @@ import SpotifyLogo from '@/components/ui/spotify-logo'
 import WrapFrame from '@/components/ui/wrap-frame'
 import Image from 'next/image'
 
-const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
+const TopSongsFrame = ({ songs, bgColor, textColor }) => {
   return (
     <WrapFrame>
       <div
-        id="tracks"
+        id="songs"
         className="h-full w-full"
         style={{ backgroundColor: `${bgColor}`, color: `${textColor}` }}
       >
-        {tracks ? (
+        {songs ? (
           <>
             <div className="px-6 py-14">
               <div className={`text-xl font-bold`}>My Top Songs</div>
               <div className="mt-6 flex flex-col items-center justify-center space-y-2">
-                {tracks &&
-                  tracks.map(({ name, artists, album }, index) => (
+                {songs &&
+                  songs.map(({ name, artists, album }, index) => (
                     <div
                       className={`flex w-full items-center justify-center space-x-2`}
                       key={index}
@@ -76,4 +76,4 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
   )
 }
 
-export default TopTrackFrame
+export default TopSongsFrame
