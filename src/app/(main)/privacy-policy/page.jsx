@@ -27,13 +27,8 @@ export default async function Generate() {
             >
               apps page
             </Link>
-<<<<<<< HEAD
             &nbsp;and click "REMOVE ACCESS." You can find more details on how to
             do that in this&nbsp;
-=======
-            &nbsp; and click "REMOVE ACCESS." You can find more details on how
-            to do that in this&nbsp;
->>>>>>> 2df56ac48088d71c7489e2f680772ce1932a0ca9
             <Link
               href="https://support.spotify.com/us/article/spotify-on-other-apps/"
               passHref
