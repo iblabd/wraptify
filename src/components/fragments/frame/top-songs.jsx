@@ -35,7 +35,7 @@ const TopSongsFrame = ({ songs, bgColor, textColor }) => {
                             src={album.images[0].url}
                             width={256}
                             height={256}
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                             unoptimized
                           />
                         </AspectRatio>
