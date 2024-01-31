@@ -4,7 +4,7 @@ import 'react-device-frameset/styles/marvel-devices.min.css'
 
 const WrapFrame = ({ children }) => {
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full select-none justify-center">
       <DeviceFrameset
         device="Nexus 5"
         height={512}
