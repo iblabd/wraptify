@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
         <div className="container">{children}</div>
       </div>
       <div className="container mb-8 text-sm text-muted-foreground">
-        Built by{' '}
+        Built by&nbsp;
         <Link
           href="https://github.com/iblabd"
           passHref

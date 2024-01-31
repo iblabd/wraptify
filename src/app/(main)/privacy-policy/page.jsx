@@ -18,7 +18,7 @@ export default async function Generate() {
           </li>
           <li>
             If you want to stop Wraptify from accessing your information, go to
-            your{' '}
+            your&nbsp;
             <Link
               href="https://www.spotify.com/account/apps/"
               passHref
@@ -26,9 +26,9 @@ export default async function Generate() {
               target="blank"
             >
               apps page
-            </Link>{' '}
-            and click "REMOVE ACCESS." You can find more details on how to do
-            that in this{' '}
+            </Link>
+            &nbsp; and click "REMOVE ACCESS." You can find more details on how
+            to do that in this&nbsp;
             <Link
               href="https://support.spotify.com/us/article/spotify-on-other-apps/"
               passHref
