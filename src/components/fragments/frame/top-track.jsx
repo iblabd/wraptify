@@ -36,10 +36,10 @@ const TopTrackFrame = ({ tracks, bgColor, textColor }) => {
                     </AspectRatio>
                   </div>
                   <div className="flex h-full w-full flex-col justify-center">
-                    <span className="line-clamp-1 text-xs font-bold">
+                    <span className="line-clamp-1 text-xs/[1.125rem] font-bold">
                       {name}
                     </span>
-                    <span className="line-clamp-1 text-[0.625rem] opacity-90">
+                    <span className="line-clamp-1 text-[0.625rem]/[0.875rem] opacity-90">
                       {artists[0].name}
                     </span>
                   </div>
