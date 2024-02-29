@@ -62,7 +62,7 @@ const TopSongsFrame = ({ songs, bgColor, textColor }) => {
                 className="text-sm font-semibold"
                 style={{ color: textColor }}
               >
-                bit.ly/wraptify
+                s.id/wraptify
               </div>
             </div>
           </>
