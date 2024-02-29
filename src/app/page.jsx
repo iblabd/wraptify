@@ -10,10 +10,10 @@ export default async function Main() {
     redirect('/generate')
   } else {
     return (
-      <>
+      <div className="homepage mx-auto flex w-full flex-col">
         <Navbar />
         <Hero />
-      </>
+      </div>
     )
   }
 }

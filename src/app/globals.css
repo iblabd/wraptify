@@ -77,3 +77,17 @@
     @apply inline-block;
   }
 }
+
+@layer utilities {
+  .homepage::before {
+    content: '';
+    background-image: url(/images/grid.svg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.03;
+    z-index: -2;
+  }
+}

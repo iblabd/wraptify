@@ -1,12 +1,9 @@
 import './globals.css'
 import NextAuthProvider from '@/contexts/next-auth-provider'
 import { cn } from '@/lib/utils'
-import { Poppins } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Wraptify - Wrap Your Spotify!',
@@ -17,8 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cn(poppins.className, 'scroll-smooth')}>
-        <NextAuthProvider>{children}</NextAuthProvider>
+      <body className={cn(inter.className, 'scroll-smooth')}>
+        <NextAuthProvider>
+          <div className="mx-auto flex h-fit w-full flex-col sm:max-w-4xl">
+            {children}
+          </div>
+        </NextAuthProvider>
       </body>
     </html>
   )
